@@ -4,7 +4,7 @@ from django.db import models
 class Hero(models.Model):
     name = models.CharField(max_length = 50)
     about_me = models.CharField(max_length = 100)
-    bio = models.CharField(max_length = 300)
+    bio = models.CharField(max_length = 1000)
     ability_types = models.ManyToManyField('AbilityType', through='Ability')
 
 class Ability(models.Model):
